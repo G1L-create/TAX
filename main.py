@@ -18,11 +18,11 @@ def recommend_strategy(company_profit):
         net_to_owner = 360000
     elif 500_001 <= company_profit <= 700_000:
         strategy = "ג' – שכר עד תקרת ביטוח לאומי, שאר כדיבידנד"
-        explanation = "משיכת שכר עד ~50 אש"ח לחודש, שאר הרווח כדיבידנד כדי להימנע ממס כפול."
+        explanation = "משיכת שכר עד ~50 אש\"ח לחודש, שאר הרווח כדיבידנד כדי להימנע ממס כפול."
         tax_paid = 215000
         net_to_owner = 485000
     elif 700_001 <= company_profit <= 900_000:
-        strategy = "ג' – שכר עד ~600 אש"ח, יתרת רווח כדיבידנד"
+        strategy = "ג' – שכר עד ~600 אש\"ח, יתרת רווח כדיבידנד"
         explanation = "שילוב חכם בין שכר לדיבידנד כדי לחסוך בדמי ביטוח ובמס הכנסה."
         tax_paid = 280000
         net_to_owner = 620000
@@ -36,7 +36,7 @@ def recommend_strategy(company_profit):
         "רווח החברה": company_profit,
         "אסטרטגיה מומלצת": strategy,
         "הסבר": explanation,
-        "סה"כ מס וביטוח לאומי": tax_paid,
+        "סה\"כ מס וביטוח לאומי": tax_paid,
         "נטו לבעלים": net_to_owner
     }
 
@@ -73,7 +73,7 @@ def simulate(profit: int = Query(..., alias="profit")):
             <ul>
                 <li><strong>אסטרטגיה מומלצת:</strong> {result['אסטרטגיה מומלצת']}</li>
                 <li><strong>הסבר:</strong> {result['הסבר']}</li>
-                <li><strong>סה"כ מס וביטוח לאומי:</strong> {result['סה"כ מס וביטוח לאומי']} ₪</li>
+                <li><strong>סה\"כ מס וביטוח לאומי:</strong> {result['סה"כ מס וביטוח לאומי']} ₪</li>
                 <li><strong>נטו לבעלים:</strong> {result['נטו לבעלים']} ₪</li>
             </ul>
             <a href="/">חזור</a>
